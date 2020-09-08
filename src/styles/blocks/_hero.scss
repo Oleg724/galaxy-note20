@@ -1,0 +1,65 @@
+@import '../_variables';
+
+.hero {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 4;
+  grid-column-end: 5;
+  display: flex;
+  justify-content: center;
+
+  &__text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+
+    & em {
+      color: $white;
+      font-size: 76px;
+      text-align: center;
+      font-style: normal;
+      font-family: $font-sharp-bold;
+    }
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .hero {
+    align-items: flex-end;
+
+    &__text{
+
+      margin-bottom: -25px;
+
+      & em {
+        font-size: 55px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .hero {
+
+    &__text{
+      margin-bottom: -19px;
+
+      & em {
+        font-size: 45px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 713px) {
+  .hero__text em {
+    font-size: 31px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .hero__text em {
+    font-size: 20px;
+  }
+}

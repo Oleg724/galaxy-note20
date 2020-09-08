@@ -1,0 +1,74 @@
+@import '../_variables';
+
+.header {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  height: $header-height;
+  display: flex;
+  justify-content: center;
+  background-color: $white;
+
+  &__icon {
+    width: 24px;
+  }
+
+  &__inner {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__item {
+
+    &:last-child {
+      display: flex;
+      flex-direction: row;
+      margin-right: 39px;
+    }
+  }
+
+  &__logo {
+    width: 113px;
+    margin-left: 75px;
+  }
+
+  &__text {
+    display: inline-block;
+    margin: auto 0 auto 26px;
+    font-size: 21px;
+    letter-spacing: 1px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .header {
+
+    &__logo {
+      width: 118px;
+      margin-left: 27px;
+    }
+
+    &__text {
+      font-size: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .header {
+
+    &__text {
+      font-size: 20px;
+    }
+
+    &__item svg{
+      display: none;
+    }
+
+    &__item:last-child {
+      margin-right: 5px;
+    }
+  }
+}

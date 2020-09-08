@@ -1,0 +1,124 @@
+@import '../_mixins';
+@import '../_variables';
+
+.accessories-content {
+  margin-top: 190px;
+  display: grid;
+  grid-template-rows: 6.73% 14.24% 1.25% 2.85% 4.95% 10.5% 3.25% 28.48% 9.28% 8.14%;
+  grid-template-columns: 4.16% 5.9% 32.29% 25.69% 14.4% 17.56%;
+  height: 85.34vw;
+  max-height: 1229px;
+
+  & p {
+
+  }
+
+  &__title {
+    font-family: $font-sharp-bold;
+    font-weight: 700;
+    font-size: calc(1rem + 1.1vw);
+    line-height: 1.2;
+    position: relative;
+    width: 66%;
+    min-width: 340px;
+    max-width: 409px;
+
+    &--sm {
+      font-family: $font-one;
+      font-size: 27px;
+      font-weight: 400;
+      margin-bottom: 60px;
+      text-transform: uppercase;
+    }
+  }
+
+  &__inner {
+    &:first-child {
+      grid-row-start: 1;
+      grid-row-end: 2;
+      grid-column-start: 2;
+      grid-column-end: 3;
+    }
+
+    &:nth-child(2) {
+      grid-row-start: 2;
+      grid-row-end: 3;
+      grid-column-start: 2;
+      grid-column-end: 5;
+    }
+
+    &:nth-child(3) {
+      grid-row-start: 2;
+      grid-row-end: 4;
+      grid-column-start: 4;
+      grid-column-end: 7;
+    }
+
+    &:nth-child(4) {
+      grid-row-start: 4;
+      grid-row-end: 6;
+      grid-column-start: 3;
+      grid-column-end: 4;
+      position: relative;
+      z-index: 2;
+
+      & > img {
+        width: 112%;
+      }
+    }
+
+    &:nth-child(5) {
+      grid-row-start: 8;
+      grid-row-end: 11;
+      grid-column-start: 1;
+      grid-column-end: 4;
+      margin-left: -28%;
+      margin-top: 14%;
+
+      & > img {
+        width: 103%;
+      }
+    }
+
+    &:nth-child(6) {
+      grid-row-start: 6;
+      grid-row-end: 11;
+      grid-column-start: 4;
+      grid-column-end: 6;
+      padding-left: 10px;
+
+      & > img {
+        width: 107%;
+        position: relative;
+      }
+    }
+
+    &:nth-child(7) {
+      grid-row-start: 7;
+      grid-row-end: 10;
+      grid-column-start: 6;
+      grid-column-end: 7;
+      margin-top: 40%;
+    }
+
+    & img {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .accessories-content {
+
+    &__title {
+      font-size: 19px;
+      width: 100%;
+      min-width: initial;
+      margin-top: -100px;
+
+      &--sm {
+        font-size: 14px;
+      }
+    }
+  }
+}

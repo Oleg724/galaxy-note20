@@ -1,0 +1,109 @@
+@import '../_mixins';
+@import '../_variables';
+
+.game-pass-content {
+  @include flex-column;
+
+  &__img {
+    margin-top: 90px;
+    width: 44%;
+  }
+
+  &__inner {
+    display: flex;
+  }
+
+  &__item {
+    width: 50%;
+
+    &:last-child {
+      @include flex-column;
+    }
+  }
+
+  &--padding {
+    padding: 100px 0 225px 0;
+  }
+
+  &__text {
+    font-size: 25px;
+    font-weight: 400;
+    margin-bottom: 20px;
+
+    &--margin-bottom-0 {
+      margin-bottom: 0;
+    }
+
+    &--white {
+      color: $white;
+    }
+
+    &:nth-child(2) {
+      margin-top: 10px;
+    }
+  }
+
+  &__title {
+    font-family: $font-sharp-bold;
+    font-weight: 700;
+    font-size: 46px;
+    width: 77%;
+
+    &--white {
+      color: $white;
+    }
+
+    &--sm {
+      font-family: $font-one;
+      font-size: 27px;
+      font-weight: 400;
+      margin-bottom: 60px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.game-pass-img {
+  width: 100%;
+}
+
+@media screen and (max-width: 720px) {
+  .game-pass-content {
+
+    &__img {
+      margin-top: 42px;
+    }
+
+    &--padding {
+      padding: 62px 0 115px 0;
+    }
+
+    &__text {
+      font-size: 13px;
+      margin-bottom: 15px;
+    }
+
+    &__title {
+      font-size: 23px;
+
+      &--sm {
+        font-size: 14px;
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .game-pass-content {
+
+    &__inner {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__item {
+      width: 90%;
+    }
+  }
+}

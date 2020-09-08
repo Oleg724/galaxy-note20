@@ -1,0 +1,39 @@
+@import '../_variables';
+
+.main-title {
+  top: calc( #{$section-header-height} + 90px );
+
+  &__title {
+    color: $white;
+    font-size: 48px;
+    white-space: nowrap;
+    text-align: center;
+    padding: 110px 0 55px 0;
+    font-family: $font-sharp-bold;
+  }
+
+  &__img {
+    width: 100%; /**/
+    padding-left: $bg-image-padding-left;
+  }
+}
+
+@media screen and (max-width: 720px) {
+
+  .main-title {
+    font-size: 42px;
+
+    &__img {
+      width: 100%;
+      padding-left: 65px;
+      margin-bottom: 55px;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  .main-title__title {
+    white-space: initial;
+  }
+}

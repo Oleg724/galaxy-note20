@@ -1,0 +1,37 @@
+@import '../_variables';
+
+.footer {
+  width: 100%;
+  margin: 0 auto;
+  background-color: $white;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 100px;
+
+  &__inner {
+    max-width: 1220px;
+    width: calc(100vw - 15.332%);
+  }
+
+  &__text {
+    width: 312px;
+
+    &:first-child {
+      font-size: 16px;
+    }
+
+    &:last-child {
+      font-size: 18px;
+      margin-top: 7px;
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .footer {
+
+    &__text {
+      width: 100%;
+    }
+  }
+}

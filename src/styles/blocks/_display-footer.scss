@@ -1,0 +1,18 @@
+@import '../_variables';
+
+.display-footer {
+  margin: 6.24vw 0 11.32vw 0;
+  transform: translateX(49%);
+  font-size: 23px;
+  width: 50%;
+
+  &__text {
+    color: $white;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .display-footer {
+    font-size: 11px;
+  }
+}

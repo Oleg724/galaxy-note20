@@ -1,0 +1,160 @@
+@import './_variables';
+@import './_mixins';
+
+.container {
+  width: 100%;
+}
+
+.section {
+  width: 100%;
+  margin: 0 auto;
+
+  &--width-max {
+    max-width: $max-width;
+  }
+
+  &--bg-gradient {
+    background: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 50%, rgba(135,97,96,1) 100%);
+  }
+
+  &--bg-white {
+    background-color: $white;
+  }
+
+  &--padding-top {
+    padding: 150px 0 50px 0;
+  }
+
+  &__inner {
+    @include flex-column;
+
+    &--relative {
+      position: relative;
+      height: 100%;
+    }
+
+    &--z-index {
+      position: relative;
+      z-index: 2;
+    }
+
+    &--relative-only {
+      position: relative;
+    }
+
+    &--flex-center {
+      align-items: center;
+    }
+
+    &--width-grid {
+      max-width: $grid-width;
+      margin: 0 auto;
+      width: $grid-width-2;
+    }
+
+    &--width-max-only {
+      max-width: $max-width;
+      margin: 0 auto;
+    }
+
+    &--width-max {
+      max-width: $max-width;
+      margin: 0 auto;
+      display: grid;
+      grid-template-rows: 460px 310px 80px 610px 345px;
+      grid-template-columns: 4.166% 12.08% 13.88% 45.21% 20.48% 4.166%;
+    }
+  }
+
+  &__header {
+    height: $section-header-height;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #737373;
+  }
+}
+
+.bg-img {
+  position: absolute;
+  top: 65px;
+  right: 9%;
+
+  &__img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .section {
+
+    &__inner {
+
+      &--width-max {
+        grid-template-rows: 460px 165px 80px 610px 345px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .bg-img {
+
+    &__img {
+      width: 18vw;
+    }
+  }
+
+  .section {
+
+    &__inner {
+      &--width-max {
+        grid-template-rows: 388px 165px 80px 610px 345px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .section {
+
+    &--padding-top {
+      padding: 73px 0 5px 0;
+    }
+
+    &__inner {
+      &--width-max {
+        padding-top: 40px;
+        grid-template-rows: 106px 219px 58px 325px 184px;
+        grid-template-columns: 4.16% 12.08% 11.88% 46.21% 20.48% 4.16%;
+      }
+    }
+
+    &--top {
+      justify-content: space-between;
+      height: initial;
+    }
+  }
+
+  .bg-img {
+    position: absolute;
+    top: -10px;
+    right: 9%;
+
+    &__img {
+      width: 17vw;
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .section {
+
+    &__inner {
+      &--relative-only {
+        padding-bottom: 50px;
+      }
+    }
+  }
+}

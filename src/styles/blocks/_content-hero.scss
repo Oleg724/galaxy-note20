@@ -1,0 +1,58 @@
+@import '../_mixins';
+@import '../_variables';
+
+.content-hero {
+
+  &--padding {
+    padding: 78px 0 0 0;
+  }
+
+  &__hero {
+    font-size: 80px;
+    text-align: center;
+
+    &--color-black {
+      color: initial!important;
+      text-align: center;
+      width: 100%;
+      margin-bottom: -73px;
+    }
+
+    &--font-sharp {
+      font-family: $font-sharp-bold;
+      font-size: 82px;
+    }
+  }
+
+  &__hero--sm {
+    color: $white;
+    font-size: 68px;
+    font-family: $font-sharp-bold;
+    padding: 227px 0;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .content-hero {
+
+    &--padding {
+      padding: 78px 0 36px 0;
+    }
+
+    &__hero {
+
+      &--color-black {
+        font-size: 32px!important;
+      }
+
+      &--font-sharp {
+        font-size: 41px;
+      }
+    }
+
+    &__hero--sm {
+      font-size: 34px;
+      padding: 114px 0;
+    }
+  }
+}

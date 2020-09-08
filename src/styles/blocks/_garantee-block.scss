@@ -1,0 +1,65 @@
+@import '../_variables';
+
+.garantee-text {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  &__text {
+    position: relative;
+    height: 5vw;
+    max-height: 72px;
+  }
+
+  &__img-text {
+    width: 12vw;
+    max-width: 100%;
+  }
+}
+
+.garantee {
+  grid-column-start: 5;
+  grid-column-end: 6;
+  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  &__img {
+    position: relative;
+    height: 6vw;
+    max-height: 86px;
+  }
+}
+
+.garantee,
+.garantee-text {
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+@media screen and (max-width: 720px) {
+  .garantee-text {
+
+    & svg {
+      width: 88%;
+    }
+
+    &__text {
+      height: 5.6vw;
+    }
+
+    &__img-text {
+      max-width: 84px;
+    }
+  }
+
+  .garantee {
+
+    &__img {
+      height: 5.5vw;
+    }
+  }
+}
