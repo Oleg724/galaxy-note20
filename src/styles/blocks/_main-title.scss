@@ -1,20 +1,60 @@
 @import '../_variables';
 
 .main-title {
-  top: calc( #{$section-header-height} + 90px );
+  display: flex;
+  flex-direction: column;
+  position: relative;
 
   &__title {
-    color: $white;
     font-size: 48px;
+    padding-top: 110px;
+  }
+
+  &__subtitle {
+    font-size: 36px;
+    padding-bottom: 55px;
+
+    &--absolute {
+      position: absolute;
+      bottom: 16%;
+      right: 18%;
+      font-size: 21px;
+      padding-bottom: 0;
+
+      & span {
+        font-size: 48px;
+      }
+    }
+  }
+
+  &__title,
+  &__subtitle {
+    color: $black;
     white-space: nowrap;
     text-align: center;
-    padding: 110px 0 55px 0;
     font-family: $font-sharp-bold;
+    background-color: #f6f6f6;
   }
 
   &__img {
-    width: 100%; /**/
-    padding-left: $bg-image-padding-left;
+    width: calc(100% - 190px);
+    height: 43vw;
+    max-height: 575px;
+    background-image: url("../assets/images/product.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .main-title {
+    &__subtitle {
+      &--absolute {
+        right: 22vw;
+        bottom: 8%;
+      }
+    }
   }
 }
 
@@ -24,9 +64,35 @@
     font-size: 42px;
 
     &__img {
+      background-image: url("../assets/images/product-720.png");
       width: 100%;
-      padding-left: 65px;
-      margin-bottom: 55px;
+      height: 67vw;
+      max-height: 575px;
+      background-position: 100% 100%;
+    }
+
+    &__subtitle {
+      &--absolute {
+        right: 7vw;
+        bottom: 6%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 720px) {
+
+  .main-title {
+    .main-title {
+      &__subtitle {
+        &--absolute {
+          font-size: 18px;
+
+          & span {
+            font-size: 41px;
+          }
+        }
+      }
     }
   }
 }
@@ -35,5 +101,35 @@
 
   .main-title__title {
     white-space: initial;
+  }
+}
+
+@media screen and (max-width: 580px) {
+
+  .main-title {
+    .main-title {
+      &__subtitle {
+        &--absolute {
+          font-size: 16px;
+
+          & span {
+            font-size: 36px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+
+  .main-title {
+    .main-title {
+      &__subtitle {
+        &--absolute {
+          right: 4vw;
+        }
+      }
+    }
   }
 }

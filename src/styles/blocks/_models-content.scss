@@ -102,11 +102,29 @@
       font-weight: 800;
       margin: 52px 0 15px 0;
     }
+
+    &--crossed {
+      font-size: 30px;
+      margin: 52px 0 -52px 0;
+
+      & span {
+        position: relative;
+
+        &:before {
+          content: "";
+          position: absolute;
+          border-top: 4px solid tomato;
+          width: 121%;
+          transform: rotate(-15deg);
+          transform-origin: 118% 0;
+        }
+      }
+    }
   }
 }
 
 .models-notes {
-  margin: 0 3.42% 97px 3.8%;
+  margin: 0 3.42% 50px 3.8%;
 
   &__text {
     font-size: 17px;
@@ -135,7 +153,13 @@
     &:nth-child(4) .model-details__text--lg,
     &:nth-child(5) .model-details__text--lg,
     &:nth-child(6) .model-details__text--lg {
-      margin: 55px 0 12px 0;
+      margin: 0 0 12px 0;
+    }
+
+    &:nth-child(4) .model-details__text--crossed,
+    &:nth-child(5) .model-details__text--crossed,
+    &:nth-child(6) .model-details__text--crossed {
+      margin: 28px 0 -12px 0;
     }
   }
 

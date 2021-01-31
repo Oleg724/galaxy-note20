@@ -6,8 +6,9 @@
   position: absolute;
   right: 0;
   top: $section-header-height;
-  background-color: $dark-grey-opacity;
+  background-color: $white;
   z-index: 2;
+  height: calc(100% - #{$section-header-height});
 
   &__list {
     margin: 72px 0 6px 0;

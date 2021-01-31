@@ -2,7 +2,6 @@
 
 .header {
   width: 100%;
-  max-width: 1440px;
   margin: 0 auto;
   height: $header-height;
   display: flex;
@@ -15,6 +14,7 @@
 
   &__inner {
     width: 100%;
+    max-width: 1440px;
     display: flex;
     justify-content: space-between;
     align-items: center;
