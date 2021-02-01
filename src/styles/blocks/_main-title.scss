@@ -109,6 +109,8 @@
   .main-title {
     .main-title {
       &__subtitle {
+        white-space: initial;
+
         &--absolute {
           font-size: 16px;
 
@@ -127,7 +129,30 @@
     .main-title {
       &__subtitle {
         &--absolute {
-          right: 4vw;
+          right: 6vw;
+          bottom: 5%;
+
+          & span {
+            font-size: 24px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 390px) {
+
+  .main-title {
+    .main-title {
+      &__subtitle {
+        &--absolute {
+          right: 5vw;
+          bottom: 4%;
+
+          & span {
+            font-size: 22px;
+          }
         }
       }
     }
